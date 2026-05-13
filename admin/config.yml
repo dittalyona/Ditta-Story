@@ -2,7 +2,9 @@ backend:
   name: github
   repo: dittalyona/Ditta-Story
   branch: main
-  auth_endpoint: api/auth
+  app_id: Ov23liL3pTm3e95MVXjG
+  base_url: https://api.decapcms.com
+  auth_endpoint: v1/auth/github
 
 media_folder: "static/images"
 public_folder: "/images"

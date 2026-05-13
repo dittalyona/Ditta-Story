@@ -2,3 +2,31 @@ baseURL = 'https://dittalyona.github.io/Ditta-Story/'
 locale = 'en-us'
 title = 'DITTA STORY'
 theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  displayFullLang = true
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "about"
+  name = "Tentang"
+  url = "/about"
+  weight = 2
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Cerita"
+  url = "/posts"
+  weight = 3
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Kontak"
+  url = "/contact"
+  weight = 4

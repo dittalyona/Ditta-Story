@@ -1,0 +1,52 @@
+backend:
+  name: github
+  repo: dittalyona/Ditta-Story
+  branch: main
+  app_id: Ov23liL3pTm3e95MVXjG
+  base_url: https://api.decapcms.com
+  auth_endpoint: v1/auth/github
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "cerita"
+    label: "Cerita"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "string" }
+      - { label: "Tanggal Publikasi", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+      - { label: "Kategori", name: "categories", widget: "list", allow_add: true }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+
+  - name: "halaman"
+    label: "Halaman"
+    files:
+      - name: "tentang"
+        label: "Tentang Kami"
+        file: "content/about.md"
+        fields:
+          - { label: "Judul", name: "title", widget: "string" }
+          - { label: "Deskripsi", name: "description", widget: "string" }
+          - { label: "Konten", name: "body", widget: "markdown" }
+
+      - name: "kontak"
+        label: "Kontak"
+        file: "content/contact.md"
+        fields:
+          - { label: "Judul", name: "title", widget: "string" }
+          - { label: "Deskripsi", name: "description", widget: "string" }
+          - { label: "Konten", name: "body", widget: "markdown" }
+
+      - name: "home"
+        label: "Halaman Utama"
+        file: "content/_index.md"
+        fields:
+          - { label: "Judul", name: "title", widget: "string" }
+          - { label: "Deskripsi", name: "description", widget: "string" }
+          - { label: "Konten", name: "body", widget: "markdown" }
